@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="80" fill="#2D1B69"/>
+  <circle cx="256" cy="200" r="72" stroke="#A78BFA" stroke-width="8" fill="none"/>
+  <circle cx="256" cy="200" r="24" fill="#A78BFA"/>
+  <line x1="256" y1="272" x2="256" y2="360" stroke="#A78BFA" stroke-width="8" stroke-linecap="round"/>
+  <line x1="256" y1="360" x2="160" y2="420" stroke="#A78BFA" stroke-width="6" stroke-linecap="round"/>
+  <line x1="256" y1="360" x2="352" y2="420" stroke="#A78BFA" stroke-width="6" stroke-linecap="round"/>
+  <line x1="256" y1="360" x2="256" y2="440" stroke="#A78BFA" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="160" cy="420" r="20" fill="#A78BFA" opacity="0.7"/>
+  <circle cx="352" cy="420" r="20" fill="#A78BFA" opacity="0.7"/>
+  <circle cx="256" cy="440" r="20" fill="#A78BFA" opacity="0.7"/>
+  <line x1="200" y1="155" x2="140" y2="110" stroke="#A78BFA" stroke-width="4" stroke-dasharray="8,6" opacity="0.5"/>
+  <line x1="312" y1="155" x2="372" y2="110" stroke="#A78BFA" stroke-width="4" stroke-dasharray="8,6" opacity="0.5"/>
+  <circle cx="140" cy="110" r="12" fill="#A78BFA" opacity="0.4"/>
+  <circle cx="372" cy="110" r="12" fill="#A78BFA" opacity="0.4"/>
+</svg>
