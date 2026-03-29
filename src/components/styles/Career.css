@@ -47,10 +47,10 @@
   border-image: linear-gradient(
     90deg,
     transparent 0%,
-    var(--accentColor) 50%,
+    rgba(94, 234, 212, 0.2) 50%,
     transparent 100%
   ) 1;
-  box-shadow: 0 1px 10px 0 rgba(94, 234, 212, 0.15);
+  box-shadow: 0 1px 6px 0 rgba(94, 234, 212, 0.05);
 }
 
 .career-info-box:last-child {
