@@ -1,43 +1,28 @@
-import { useState, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 import "./styles/Work.css";
-import WorkImage from "./WorkImage";
-import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
-const projects = [
-  {
-    title: "OpenSRE",
-    category: "Agentic AI / SRE",
-    tools: "LangGraph, Neo4j, Multi-Agent, Knowledge Graph, 46 Investigation Skills",
-    image: "/images/opensre.png",
-    link: "https://opensre.in",
-  },
-];
+const VIDEO_URL =
+  "https://g1ctb3hnwvhw6s5v.public.blob.vercel-storage.com/how-it-works.mp4";
 
 const Work = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const goToSlide = useCallback(
-    (index: number) => {
-      if (isAnimating) return;
-      setIsAnimating(true);
-      setCurrentIndex(index);
-      setTimeout(() => setIsAnimating(false), 500);
-    },
-    [isAnimating]
-  );
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = useCallback(() => setIsModalOpen(false), []);
 
-  const goToPrev = useCallback(() => {
-    const newIndex =
-      currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
-    goToSlide(newIndex);
-  }, [currentIndex, goToSlide]);
-
-  const goToNext = useCallback(() => {
-    const newIndex =
-      currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
-    goToSlide(newIndex);
-  }, [currentIndex, goToSlide]);
+  useEffect(() => {
+    if (!isModalOpen) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeModal();
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKey);
+    };
+  }, [isModalOpen, closeModal]);
 
   return (
     <div className="work-section" id="work">
@@ -47,78 +32,98 @@ const Work = () => {
         </h2>
 
         <div className="carousel-wrapper">
-          {/* Navigation Arrows */}
-          <button
-            className="carousel-arrow carousel-arrow-left"
-            onClick={goToPrev}
-            aria-label="Previous project"
-            data-cursor="disable"
-          >
-            <MdArrowBack />
-          </button>
-          <button
-            className="carousel-arrow carousel-arrow-right"
-            onClick={goToNext}
-            aria-label="Next project"
-            data-cursor="disable"
-          >
-            <MdArrowForward />
-          </button>
-
-          {/* Slides */}
           <div className="carousel-track-container">
-            <div
-              className="carousel-track"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-              }}
-            >
-              {projects.map((project, index) => (
-                <div className="carousel-slide" key={index}>
-                  <div className="carousel-content">
-                    <div className="carousel-info">
-                      <div className="carousel-number">
-                        <h3>0{index + 1}</h3>
-                      </div>
-                      <div className="carousel-details">
-                        <h4>{project.title}</h4>
-                        <p className="carousel-category">
-                          {project.category}
+            <div className="carousel-track">
+              <div className="carousel-slide">
+                <div className="carousel-content">
+                  <div className="carousel-info">
+                    <div className="carousel-details">
+                      <h4>OpenSRE</h4>
+                      <p className="carousel-category">Agentic AI / SRE</p>
+                      <p className="carousel-description">
+                        An open-source autonomous AI platform that investigates
+                        production incidents end-to-end. Multi-agent
+                        orchestration powered by LangGraph, knowledge graphs on
+                        Neo4j, and 46 built-in investigation skills — from log
+                        analysis to root cause identification — so on-call
+                        engineers get answers, not alerts.
+                      </p>
+                      <div className="carousel-tools">
+                        <span className="tools-label">Tools & Stack</span>
+                        <p>
+                          LangGraph, Neo4j, RAG, Python, Multi-Agent, Knowledge
+                          Graph
                         </p>
-                        <div className="carousel-tools">
-                          <span className="tools-label">Tools & Features</span>
-                          <p>{project.tools}</p>
-                        </div>
                       </div>
+                      <a
+                        href="https://opensre.in"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="carousel-link"
+                        data-cursor="disable"
+                      >
+                        Visit opensre.in →
+                      </a>
                     </div>
-                    <div className="carousel-image-wrapper">
-                      <WorkImage
-                        image={project.image}
-                        alt={project.title}
-                        link={project.link}
+                  </div>
+                  <div className="carousel-image-wrapper">
+                    <div
+                      className="video-card"
+                      onClick={openModal}
+                      data-cursor="disable"
+                    >
+                      <img
+                        src="/videos/thumbnail.webp"
+                        alt="OpenSRE demo"
+                        className="video-card-thumb"
                       />
+                      <div className="video-card-overlay" />
+                      <div className="video-card-play">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="white"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                      <div className="video-card-text">
+                        <p className="video-card-title">
+                          See OpenSRE in action
+                        </p>
+                        <p className="video-card-desc">
+                          Watch a full incident investigation in 60 seconds
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-
-          {/* Dot Indicators */}
-          <div className="carousel-dots">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
-                  }`}
-                onClick={() => goToSlide(index)}
-                aria-label={`Go to project ${index + 1}`}
-                data-cursor="disable"
-              />
-            ))}
           </div>
         </div>
       </div>
+
+      {isModalOpen &&
+        createPortal(
+          <div className="video-modal" onClick={closeModal}>
+            <div
+              className="video-modal-content"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="video-modal-close"
+                onClick={closeModal}
+                data-cursor="disable"
+              >
+                ✕
+              </button>
+              <video src={VIDEO_URL} autoPlay controls playsInline />
+            </div>
+          </div>,
+          document.body
+        )}
     </div>
   );
 };
