@@ -30,6 +30,26 @@
   letter-spacing: 1px;
 }
 
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-list li {
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 1px;
+}
+
+.about-label {
+  color: var(--accentColor);
+}
+
 @media only screen and (min-width: 600px) {
   .about-section {
     justify-content: center;
@@ -62,9 +82,14 @@
     font-size: 1.9vw;
     line-height: 2.3vw;
   }
+  .about-list li {
+    font-size: 1.9vw;
+    line-height: 2.3vw;
+  }
 }
 @media only screen and (min-width: 1950px) {
-  .about-me p {
+  .about-me p,
+  .about-list li {
     font-size: 2.5rem;
     line-height: 2.7rem;
   }

@@ -90,11 +90,8 @@ const WhatIDo = () => {
               <h3>BUILD &amp; SCALE</h3>
               <h4>Cloud Infrastructure at Scale</h4>
               <p>
-                Designing and operating cloud infrastructure at scale —
-                Kubernetes orchestration for 100+ microservices, CI/CD pipelines,
-                observability stacks processing 10+ TB daily log data, Terraform
-                IaC, and high-availability architectures across multiple
-                geographies on AWS and GCP.
+                Orchestrate 100+ microservices. Ship via CI/CD. Observe
+                everything. Sleep at night.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
@@ -130,24 +127,20 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>AGENTIC AI, INFRASTRUCTURE &amp; SRE</h3>
-              <h4>Intelligent Infrastructure Automation</h4>
+              <h3>AGENTIC AI INFRASTRUCTURE</h3>
+              <h4>Voice AI Platform at VMO India</h4>
               <p>
-                Building intelligent systems that automate infrastructure
-                operations — multi-agent architectures with LangGraph, autonomous
-                incident investigation with knowledge graphs, RAG pipelines, and
-                AI voice agent infrastructure powering customer support
-                automation.
+                Build the infra. Orchestrate the agents. Power real
+                conversations. Keep voice AI alive in production.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">LangGraph</div>
-                <div className="what-tags">Neo4j</div>
-                <div className="what-tags">RAG</div>
-                <div className="what-tags">Python</div>
-                <div className="what-tags">AI Agents</div>
                 <div className="what-tags">Voice AI</div>
-                <div className="what-tags">OpenSRE</div>
+                <div className="what-tags">Agent Infra</div>
+                <div className="what-tags">Python</div>
+                <div className="what-tags">Kubernetes</div>
+                <div className="what-tags">LangGraph</div>
+                <div className="what-tags">Observability</div>
               </div>
               <div className="what-arrow"></div>
             </div>
