@@ -20,12 +20,11 @@ const Career = () => {
               </div>
               <h3>NOW</h3>
             </div>
-            <p>
-              Strategic execution of Call-AI acquisition, revamping services with
-              containerization and bespoke CI/CD. Architected end-to-end dynamic
-              environment provisioning for Health Exchange SaaS platform. Leading
-              AI voice agent infrastructure and agentic AI implementations.
-            </p>
+            <ul>
+              <li>Led Call-AI acquisition, containerized services with bespoke CI/CD</li>
+              <li>Architected dynamic environment provisioning for Health Exchange SaaS</li>
+              <li>Building voice AI agent infrastructure & agentic AI systems</li>
+            </ul>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
@@ -35,14 +34,12 @@ const Career = () => {
               </div>
               <h3>2019–23</h3>
             </div>
-            <p>
-              Led architecture and migration of 100+ microservices to Kubernetes
-              with Istio Mesh. Engineered highly available AWS infrastructure for
-              India's largest mobile gaming platform (100M+ users). Implemented
-              log management with ELK handling 10+ TB daily data. Designed
-              Terraform and Atlantis-based IaC; observability with Prometheus,
-              Thanos, and Grafana.
-            </p>
+            <ul>
+              <li>Migrated 100+ microservices to Kubernetes with Istio Service Mesh</li>
+              <li>HA AWS infrastructure for India's largest gaming platform (100M+ users)</li>
+              <li>ELK log management handling 10+ TB daily; Terraform + Atlantis IaC</li>
+              <li>Observability with Prometheus, Thanos & Grafana</li>
+            </ul>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
@@ -52,11 +49,11 @@ const Career = () => {
               </div>
               <h3>2016–19</h3>
             </div>
-            <p>
-              Proposed and implemented highly available, scalable architectures
-              on AWS. CI pipelines with Jenkins, infrastructure automation with
-              Chef. Monitoring and logging with DataDog and Loggly.
-            </p>
+            <ul>
+              <li>Designed HA, scalable AWS architectures from the ground up</li>
+              <li>CI pipelines with Jenkins; infrastructure automation with Chef</li>
+              <li>Monitoring & logging with DataDog and Loggly</li>
+            </ul>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
@@ -66,12 +63,11 @@ const Career = () => {
               </div>
               <h3>2015–16</h3>
             </div>
-            <p>
-              Led cloud migration for Cathay Pacific Airways as project lead and
-              Ansible developer. Containerized microservices with Docker and
-              Kubernetes. Integrated automated tests with CI pipeline using
-              DroneCI.
-            </p>
+            <ul>
+              <li>Led cloud migration for Cathay Pacific as project lead & Ansible developer</li>
+              <li>Containerized microservices with Docker & Kubernetes</li>
+              <li>Integrated automated tests into CI pipeline with DroneCI</li>
+            </ul>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
@@ -81,12 +77,11 @@ const Career = () => {
               </div>
               <h3>2014–15</h3>
             </div>
-            <p>
-              Managed Linux servers and automated deployment with Webistrano,
-              Capistrano, and Chef. Deployment automation across ROR, Django,
-              NodeJS, and Tomcat stacks. LDAP authentication, automated backups,
-              and Nagios monitoring.
-            </p>
+            <ul>
+              <li>Managed Linux servers; automated deployments with Webistrano & Capistrano</li>
+              <li>Multi-stack deployments across ROR, Django, NodeJS & Tomcat</li>
+              <li>LDAP auth, automated backups & Nagios monitoring</li>
+            </ul>
           </div>
         </div>
       </div>
