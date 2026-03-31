@@ -1,26 +1,35 @@
 import { lazy, Suspense } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { LoadingProvider } from "./context/LoadingProvider";
+import BlogList from "./components/Blog/BlogList";
+import BlogPostPage from "./components/Blog/BlogPost";
 import "./App.css";
-import BlogRouter from "./components/Blog/BlogRouter";
 
 const CharacterModel = lazy(() => import("./components/Character"));
 const MainContainer = lazy(() => import("./components/MainContainer"));
-import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {
   return (
-    <>
-      <BlogRouter>
-        <LoadingProvider>
-          <Suspense>
-            <MainContainer>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route
+          path="*"
+          element={
+            <LoadingProvider>
               <Suspense>
-                <CharacterModel />
+                <MainContainer>
+                  <Suspense>
+                    <CharacterModel />
+                  </Suspense>
+                </MainContainer>
               </Suspense>
-            </MainContainer>
-          </Suspense>
-        </LoadingProvider>
-      </BlogRouter>
-    </>
+            </LoadingProvider>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

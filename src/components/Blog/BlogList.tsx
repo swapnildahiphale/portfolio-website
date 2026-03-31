@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { getAllBlogPosts } from "../../data/blogPosts";
 import "../styles/Blog.css";
 
@@ -12,17 +13,17 @@ const BlogList = () => {
 
   return (
     <div className="blog-container">
-      <a href="#/" className="blog-back-link">
+      <Link to="/" className="blog-back-link">
         &larr; Back to Portfolio
-      </a>
+      </Link>
       <div className="blog-header">
         <h1>Blog</h1>
         <p>Thoughts on SRE, AI engineering, and building OpenSRE.</p>
       </div>
       {posts.map((post) => (
-        <a
+        <Link
           key={post.slug}
-          href={`#/blog/${post.slug}`}
+          to={`/blog/${post.slug}`}
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <div className="blog-post-card">
@@ -45,7 +46,7 @@ const BlogList = () => {
               ))}
             </div>
           </div>
-        </a>
+        </Link>
       ))}
     </div>
   );
