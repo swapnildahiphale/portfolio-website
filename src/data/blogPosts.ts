@@ -11,7 +11,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "introducing-opensre",
     title: "Introducing OpenSRE — AI-Powered Incident Investigation",
-    date: "2026-03-31",
+    date: "2026-04-07",
     content: `
       <p>I'm excited to announce <strong>OpenSRE</strong> — an open-source AI SRE platform that automatically investigates production incidents using episodic memory and knowledge graphs.</p>
       <p>After years of being on-call and manually investigating incidents, I built OpenSRE to automate the repetitive parts of incident response. The platform combines LLM agents with a Neo4j knowledge graph to understand service topology and an episodic memory system that learns from every investigation.</p>
