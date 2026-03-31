@@ -30,3 +30,4 @@ backup/
 .vercel
 .superpowers/
 docs/superpowers/
+.worktrees/
