@@ -2,12 +2,6 @@ import { Link } from "react-router-dom";
 import { getAllBlogPosts } from "../../data/blogPosts";
 import "../styles/Blog.css";
 
-function stripHtml(html: string): string {
-  const div = document.createElement("div");
-  div.innerHTML = html;
-  return div.textContent || "";
-}
-
 const BlogList = () => {
   const posts = getAllBlogPosts();
 
@@ -36,7 +30,7 @@ const BlogList = () => {
               })}
             </p>
             <p className="blog-post-excerpt">
-              {stripHtml(post.content).slice(0, 150)}...
+              {post.description}
             </p>
             <div className="blog-post-tags">
               {post.tags.map((tag) => (

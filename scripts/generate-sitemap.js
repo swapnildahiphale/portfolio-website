@@ -6,6 +6,8 @@ import { readFileSync, writeFileSync } from "fs";
 
 const blogPostsFile = readFileSync("src/data/blogPosts.ts", "utf-8");
 
+// NOTE: This regex assumes slug appears before date in each post object.
+// If field order changes, update the regex accordingly.
 const postRegex = /slug:\s*"([^"]+)"[\s\S]*?date:\s*"([^"]+)"/g;
 const posts = [];
 let match;

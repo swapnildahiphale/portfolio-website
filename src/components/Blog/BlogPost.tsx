@@ -84,6 +84,7 @@ const BlogPostPage = () => {
       document.title = "Swapnil Dahiphale — SRE & AI Engineer";
       const el = document.getElementById("blog-jsonld");
       if (el) el.remove();
+      document.querySelector('meta[property="article:published_time"]')?.remove();
       setMeta("name", "description", "SRE & AI Engineer building resilient systems at scale. Creator of OpenSRE — the open-source SRE knowledge platform.");
       setLink("canonical", "https://swapnil.one");
       setMeta("property", "og:type", "website");
