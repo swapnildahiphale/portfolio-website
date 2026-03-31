@@ -1,0 +1,169 @@
+[
+  {
+    "index": 0,
+    "urn": "urn:li:activity:7396525944288727040",
+    "date_approx": "2025-11",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7396525944288727040/",
+    "text": "Cloudflare is down, Again!",
+    "imageUrls": [
+      "https://media.licdn.com/dms/image/v2/D4D22AQEvgxqJYJrXug/feedshare-shrink_800/B4DZqW9IfYIgAg-/0/1763469205217"
+    ]
+  },
+  {
+    "index": 1,
+    "urn": "urn:li:activity:7396426945636339712",
+    "date_approx": "2025-11",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7396426945636339712/",
+    "text": "Token costs are the quiet tax of the AI era.\nEvery time we send JSON to an LLM, we're paying for the same field names again and again.\nA 100-row dataset? You've basically paid for \"customer_id\" 100 times.\n\nI stumbled upon TOON (Token-Oriented Object Notation) this week, and it's such a clever idea.\nInstead of repeating keys, you define the schema once, then stream your data like CSV: \norders[100]{id,customer,total}:\n 1,John,499.00\n 2,Ana,129.00\n\nThe benchmarks show 40–60% fewer tokens on real datasets — one analytics dump went from 10,977 → 4,507 tokens.\nEven better, models actually parse TOON more accurately than JSON, because the structure helps them \"see\" the data clearly.\n\nIf you're running anything that pushes structured data into LLMs, this is worth a look. (Link in description)",
+    "imageUrls": [
+      "https://media.licdn.com/dms/image/v2/D4D22AQH6pezaQdX0aQ/feedshare-shrink_800/B4DZqSP1OKH0Ag-/0/1763390225788"
+    ]
+  },
+  {
+    "index": 2,
+    "urn": "urn:li:activity:7373612383023312896",
+    "date_approx": "2025-09",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7373612383023312896/",
+    "text": "Just read this AI 2027 scenario and it's kind of unsettling.\nBasically two paths - we either rush AI development and things go badly, or we slow down but a small group gets way too much power. Neither sounds great??\n\nI keep wondering if we're moving too fast or not fast enough with AI. Feels like we're all just winging it.\nAnyone else feeling this tension? What's your take?\n\nFull scenario link in the comments 👇",
+    "imageUrls": [
+      "https://media.licdn.com/dms/image/v2/D4D22AQHcL33MCEvQ3g/feedshare-shrink_800/B4DZlRVYX5JIAg-/0/1758006185670"
+    ]
+  },
+  {
+    "index": 3,
+    "urn": "urn:li:activity:6404280004703805440",
+    "date_approx": "2019-04",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6404280004703805440/",
+    "text": "Some weekends are just more memorable than others. Put my #Serverless portfolio website into production!\nhttps://swapnil.one\n\n#Serverless is being examined as a new abstraction for making business applications. Do let me know if you want to here more on this!\n#serverless #AWS",
+    "imageUrls": []
+  },
+  {
+    "index": 4,
+    "urn": "urn:li:activity:6357181862254874624",
+    "date_approx": "2018-03",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6357181862254874624/",
+    "text": "One more certification added to bucket!\n#RedHat Delivery Specialist - #Cloud #Automation",
+    "imageUrls": [
+      "https://media.licdn.com/dms/image/v2/C4D22AQFGETknAelB4A/feedshare-shrink_800/feedshare-shrink_800/0/1577493001717"
+    ]
+  },
+  {
+    "index": 5,
+    "urn": "urn:li:activity:6316834021577986048",
+    "date_approx": "2017-09-09",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6316834021577986048/",
+    "text": "Presented in DevOps++ Global Summit 2017 on 9th September 2017",
+    "imageUrls": []
+  },
+  {
+    "index": 6,
+    "urn": "urn:li:activity:6312973810626887680",
+    "date_approx": "2017-09-12",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6312973810626887680/",
+    "text": "It was a great experience speaking in DevOps++ Global Summit 2017.\nThank you Lokesh Jawane for being an awesome co presenter.\n#doppa17 #agileta #DevOpspp",
+    "imageUrls": [
+      "https://media.licdn.com/dms/image/v2/C4D22AQEMkv6_qO6gYA/feedshare-shrink_800/feedshare-shrink_800/0/1577742159857",
+      "https://media.licdn.com/dms/image/v2/C4D22AQHKdlxuSWBeVw/feedshare-shrink_800/feedshare-shrink_800/0/1576184813683"
+    ]
+  },
+  {
+    "index": 7,
+    "urn": "urn:li:activity:6311852631258173440",
+    "date_approx": "2017-09-05",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6311852631258173440/",
+    "text": "Lets meet at Devops ++ Global Summit 2017, I will be talking on  \"Windows Automation using Ansible\" in this conference.\n#doppa17 @agileta @devopspp\nhttps://lnkd.in/fnrwrHw",
+    "imageUrls": [
+      "https://media.licdn.com/dms/image/v2/C4D22AQFxQDCxC8rdHg/feedshare-shrink_800/feedshare-shrink_800/0/1578659329342"
+    ]
+  },
+  {
+    "index": 8,
+    "urn": "urn:li:activity:6308972822966390784",
+    "date_approx": "2017-08-25",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6308972822966390784/",
+    "text": "Want a free ticket to the #doppa17 conf in #Pune? Take our #devops assessment quiz n lucky winner gets a free conf pass! \nhttps://lnkd.in/eSMvFre",
+    "imageUrls": []
+  },
+  {
+    "index": 9,
+    "urn": "urn:li:activity:6303890160392208384",
+    "date_approx": "2018-02",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6303890160392208384/",
+    "text": "Happy and pround to have achived and hold the \n#RedHat DELIVERY SPECIALIST - PLATFORM-AS-A-SERVICE (#PAAS) and\n#RedHat DELIVERY SPECIALIST - PLATFORM-AS-A-SERVICE (#PAAS) DEVELOPMENT\nCertifications!",
+    "imageUrls": [
+      "https://media.licdn.com/dms/image/v2/C4D22AQGimG4GTvlf3Q/feedshare-shrink_800/feedshare-shrink_800/0/1577941188776"
+    ]
+  },
+  {
+    "index": 10,
+    "urn": "urn:li:activity:6289058830408130560",
+    "date_approx": "2017-05",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6289058830408130560/",
+    "text": "#ContinuousIntegration for #Salesforce",
+    "imageUrls": []
+  },
+  {
+    "index": 11,
+    "urn": "urn:li:activity:6248106071844581376",
+    "date_approx": "2017-01",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6248106071844581376/",
+    "text": "Calculate your #devops readiness score!",
+    "imageUrls": [
+      "https://media.licdn.com/dms/image/v2/C4D22AQGisdeQlaDRfQ/feedshare-shrink_800/feedshare-shrink_800/0/1576758857937"
+    ]
+  },
+  {
+    "index": 12,
+    "urn": "urn:li:activity:6146155464750137344",
+    "date_approx": "2016-04",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6146155464750137344/",
+    "text": "I did it! I'm pretty excited to be in the first group of people to be recognized as a certified Jenkins Engineer. After working with this great product for some time, it was great to finally have recognition for what I've learned. This product has been a big help in Continuous Integration and Continuous Delivery principles! \n(Verified Certificate available at https://lnkd.in/fdbCwMZ)",
+    "imageUrls": [
+      "https://media.licdn.com/dms/image/v2/C4D22AQHoAcrQrQXLBQ/feedshare-shrink_800/feedshare-shrink_800/0/1583898516298"
+    ]
+  },
+  {
+    "index": 13,
+    "urn": "urn:li:activity:6130618476034805760",
+    "date_approx": "2016-02",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6130618476034805760/",
+    "text": "I'm happy to share that I have passed the AWS Solutions Architect Associate exam today !",
+    "imageUrls": [
+      "https://media.licdn.com/dms/image/v2/C4D22AQHq33BbJKGRJQ/feedshare-shrink_800/feedshare-shrink_800/0/1583619900106"
+    ]
+  },
+  {
+    "index": 14,
+    "urn": "urn:li:activity:6108913374249111553",
+    "date_approx": "2015-12",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6108913374249111553/",
+    "text": "presentation by our DevOps engineer Swapnil Dahiphale in the Bangalore conference.",
+    "imageUrls": []
+  },
+  {
+    "index": 15,
+    "urn": "urn:li:activity:6105277094932000768",
+    "date_approx": "2015-12",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6105277094932000768/",
+    "text": "My presentation at DevOps Meetup, Banglore",
+    "imageUrls": []
+  },
+  {
+    "index": 16,
+    "urn": "urn:li:activity:6098455172197928960",
+    "date_approx": "2015-11",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6098455172197928960/",
+    "text": "Are unikernels unfit for production? Joyent CTO Bryan Cantrill thinks so and here's why: https://lnkd.in/bGy7bt9 …",
+    "imageUrls": [
+      "https://media.licdn.com/dms/image/v2/C5622AQFLe7dgrb5p1w/feedshare-shrink_480/feedshare-shrink_480/0/1597576189751"
+    ]
+  },
+  {
+    "index": 17,
+    "urn": "urn:li:activity:6082157907745460224",
+    "date_approx": "2015-09",
+    "linkedinUrl": "https://www.linkedin.com/feed/update/urn:li:activity:6082157907745460224/",
+    "text": "Excellent talk & demo on #AWS #ECS and setting up #Build pipeline with EC2 and #Jenkins by our DevOps engineer @Swapnil Dahiphale at Pune DevOps Meet hosted by @WhiteHedge Technologies - https://lnkd.in/eEJ2HNg",
+    "imageUrls": []
+  }
+]

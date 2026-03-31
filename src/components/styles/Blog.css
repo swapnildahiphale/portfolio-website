@@ -127,6 +127,24 @@
   color: var(--accentColor);
 }
 
+.blog-post-full .blog-post-content pre {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.blog-post-full .blog-post-content code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
 .blog-linkedin-link {
   display: inline-block;
   margin-top: 40px;
