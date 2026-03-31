@@ -1,56 +1,104 @@
 import { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import { getBlogPostBySlug } from "../../data/blogPosts";
 import "../styles/Blog.css";
 
-interface BlogPostProps {
-  slug: string;
-}
-
-const BlogPostPage = ({ slug }: BlogPostProps) => {
-  const post = getBlogPostBySlug(slug);
+const BlogPostPage = () => {
+  const { slug } = useParams<{ slug: string }>();
+  const post = slug ? getBlogPostBySlug(slug) : undefined;
 
   useEffect(() => {
-    if (post) {
-      document.title = `${post.title} — Swapnil Dahiphale`;
+    window.scrollTo(0, 0);
+  }, [slug]);
 
-      const existingLd = document.getElementById("blog-jsonld");
-      if (existingLd) existingLd.remove();
+  useEffect(() => {
+    if (!post) return;
 
-      const script = document.createElement("script");
-      script.id = "blog-jsonld";
-      script.type = "application/ld+json";
-      script.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        headline: post.title,
-        datePublished: post.date,
-        author: {
-          "@type": "Person",
-          name: "Swapnil Dahiphale",
-          url: "https://swapnil.one",
-        },
-        publisher: {
-          "@type": "Person",
-          name: "Swapnil Dahiphale",
-        },
-        mainEntityOfPage: `https://swapnil.one/#/blog/${post.slug}`,
-      });
-      document.head.appendChild(script);
+    document.title = `${post.title} — Swapnil Dahiphale`;
 
-      return () => {
-        document.title = "Swapnil Dahiphale — SRE & AI Engineer";
-        const el = document.getElementById("blog-jsonld");
-        if (el) el.remove();
-      };
-    }
+    const setMeta = (attr: string, key: string, content: string) => {
+      let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement;
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", content);
+    };
+
+    const setLink = (rel: string, href: string) => {
+      let el = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement;
+      if (!el) {
+        el = document.createElement("link");
+        el.setAttribute("rel", rel);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("href", href);
+    };
+
+    const canonicalUrl = `https://swapnil.one/blog/${post.slug}`;
+
+    setMeta("name", "description", post.description);
+    setLink("canonical", canonicalUrl);
+    setMeta("property", "og:type", "article");
+    setMeta("property", "og:title", post.title);
+    setMeta("property", "og:description", post.description);
+    setMeta("property", "og:url", canonicalUrl);
+    setMeta("property", "article:published_time", post.date);
+
+    const div = document.createElement("div");
+    div.innerHTML = post.content;
+    const plainText = div.textContent || "";
+
+    const existingLd = document.getElementById("blog-jsonld");
+    if (existingLd) existingLd.remove();
+
+    const script = document.createElement("script");
+    script.id = "blog-jsonld";
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.description,
+      datePublished: post.date,
+      keywords: post.tags.join(", "),
+      inLanguage: "en",
+      url: canonicalUrl,
+      wordCount: plainText.split(/\s+/).length,
+      articleBody: plainText.slice(0, 500),
+      author: {
+        "@type": "Person",
+        name: "Swapnil Dahiphale",
+        url: "https://swapnil.one",
+      },
+      publisher: {
+        "@type": "Person",
+        name: "Swapnil Dahiphale",
+      },
+      mainEntityOfPage: canonicalUrl,
+    });
+    document.head.appendChild(script);
+
+    return () => {
+      document.title = "Swapnil Dahiphale — SRE & AI Engineer";
+      const el = document.getElementById("blog-jsonld");
+      if (el) el.remove();
+      setMeta("name", "description", "SRE & AI Engineer building resilient systems at scale. Creator of OpenSRE — the open-source SRE knowledge platform.");
+      setLink("canonical", "https://swapnil.one");
+      setMeta("property", "og:type", "website");
+      setMeta("property", "og:title", "Swapnil Dahiphale — SRE & AI Engineer");
+      setMeta("property", "og:description", "SRE & AI Engineer building resilient systems at scale. Creator of OpenSRE — the open-source SRE knowledge platform.");
+      setMeta("property", "og:url", "https://swapnil.one");
+    };
   }, [post, slug]);
 
   if (!post) {
     return (
       <div className="blog-container">
-        <a href="#/blog" className="blog-back-link">
+        <Link to="/blog" className="blog-back-link">
           &larr; Back to Blog
-        </a>
+        </Link>
         <h1>Post not found</h1>
       </div>
     );
@@ -58,9 +106,9 @@ const BlogPostPage = ({ slug }: BlogPostProps) => {
 
   return (
     <div className="blog-container">
-      <a href="#/blog" className="blog-back-link">
+      <Link to="/blog" className="blog-back-link">
         &larr; Back to Blog
-      </a>
+      </Link>
       <article className="blog-post-full">
         <h1>{post.title}</h1>
         <div className="blog-post-meta">
