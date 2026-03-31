@@ -9,8 +9,8 @@ import { LoadingProvider } from "./context/LoadingProvider";
 const App = () => {
   return (
     <>
-      <LoadingProvider>
-        <BlogRouter>
+      <BlogRouter>
+        <LoadingProvider>
           <Suspense>
             <MainContainer>
               <Suspense>
@@ -18,8 +18,8 @@ const App = () => {
               </Suspense>
             </MainContainer>
           </Suspense>
-        </BlogRouter>
-      </LoadingProvider>
+        </LoadingProvider>
+      </BlogRouter>
     </>
   );
 };
