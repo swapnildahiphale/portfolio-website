@@ -1,3 +1,8 @@
+/* Blog pages need native scroll; index.css sets body { overflow: hidden } for GSAP ScrollSmoother */
+body:has(.blog-container) {
+  overflow: auto;
+}
+
 .blog-container {
   width: var(--cWidth);
   max-width: 800px;
