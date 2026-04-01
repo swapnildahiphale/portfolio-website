@@ -1,28 +1,23 @@
+import { Link } from "react-router-dom";
 import { getAllBlogPosts } from "../../data/blogPosts";
 import "../styles/Blog.css";
-
-function stripHtml(html: string): string {
-  const div = document.createElement("div");
-  div.innerHTML = html;
-  return div.textContent || "";
-}
 
 const BlogList = () => {
   const posts = getAllBlogPosts();
 
   return (
     <div className="blog-container">
-      <a href="#/" className="blog-back-link">
+      <Link to="/" className="blog-back-link">
         &larr; Back to Portfolio
-      </a>
+      </Link>
       <div className="blog-header">
         <h1>Blog</h1>
         <p>Thoughts on SRE, AI engineering, and building OpenSRE.</p>
       </div>
       {posts.map((post) => (
-        <a
+        <Link
           key={post.slug}
-          href={`#/blog/${post.slug}`}
+          to={`/blog/${post.slug}`}
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <div className="blog-post-card">
@@ -35,7 +30,7 @@ const BlogList = () => {
               })}
             </p>
             <p className="blog-post-excerpt">
-              {stripHtml(post.content).slice(0, 150)}...
+              {post.description}
             </p>
             <div className="blog-post-tags">
               {post.tags.map((tag) => (
@@ -45,7 +40,7 @@ const BlogList = () => {
               ))}
             </div>
           </div>
-        </a>
+        </Link>
       ))}
     </div>
   );

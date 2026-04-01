@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
+        <a href="/" className="navbar-title" data-cursor="disable">
           SD
         </a>
         <a
@@ -72,7 +72,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#/blog" data-cursor="icons">
+            <a href="/blog" data-cursor="icons">
               <HoverLinks text="BLOG" />
             </a>
           </li>
