@@ -1,19 +1,9 @@
 // Reads blog post slugs and generates public/sitemap.xml at build time.
 // Runs as ESM (package.json has "type": "module").
-// We parse the TS file with regex to avoid needing ts-node in the build.
 
 import { readFileSync, writeFileSync } from "fs";
 
-const blogPostsFile = readFileSync("src/data/blogPosts.ts", "utf-8");
-
-// NOTE: This regex assumes slug appears before date in each post object.
-// If field order changes, update the regex accordingly.
-const postRegex = /slug:\s*"([^"]+)"[\s\S]*?date:\s*"([^"]+)"/g;
-const posts = [];
-let match;
-while ((match = postRegex.exec(blogPostsFile)) !== null) {
-  posts.push({ slug: match[1], date: match[2] });
-}
+const posts = JSON.parse(readFileSync("src/data/blogPosts.json", "utf-8"));
 
 const today = new Date().toISOString().slice(0, 10);
 

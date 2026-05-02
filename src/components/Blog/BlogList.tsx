@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { getAllBlogPosts } from "../../data/blogPosts";
+import { BlogHeader, BlogFooter } from "./BlogChrome";
 import "../styles/Blog.css";
 
 const BlogList = () => {
@@ -7,9 +8,7 @@ const BlogList = () => {
 
   return (
     <div className="blog-container">
-      <Link to="/" className="blog-back-link">
-        &larr; Back to Portfolio
-      </Link>
+      <BlogHeader />
       <div className="blog-header">
         <h1>Blog</h1>
         <p>Thoughts on SRE, AI engineering, and building OpenSRE.</p>
@@ -42,6 +41,7 @@ const BlogList = () => {
           </div>
         </Link>
       ))}
+      <BlogFooter />
     </div>
   );
 };

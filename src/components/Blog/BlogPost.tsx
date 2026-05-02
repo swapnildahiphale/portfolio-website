@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getBlogPostBySlug } from "../../data/blogPosts";
+import { BlogHeader, BlogFooter } from "./BlogChrome";
 import "../styles/Blog.css";
 
 const BlogPostPage = () => {
@@ -97,16 +98,19 @@ const BlogPostPage = () => {
   if (!post) {
     return (
       <div className="blog-container">
+        <BlogHeader />
         <Link to="/blog" className="blog-back-link">
           &larr; Back to Blog
         </Link>
         <h1>Post not found</h1>
+        <BlogFooter />
       </div>
     );
   }
 
   return (
     <div className="blog-container">
+      <BlogHeader />
       <Link to="/blog" className="blog-back-link">
         &larr; Back to Blog
       </Link>
@@ -141,6 +145,7 @@ const BlogPostPage = () => {
           </a>
         )}
       </article>
+      <BlogFooter />
     </div>
   );
 };

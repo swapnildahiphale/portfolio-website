@@ -12,6 +12,46 @@ body:has(.blog-container) {
   color: #eae5ec;
 }
 
+.blog-nav {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.blog-nav-link {
+  color: var(--accentColor);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.blog-nav-link:hover {
+  opacity: 1;
+}
+
+.blog-footer {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.blog-footer p {
+  margin: 0 0 6px;
+}
+
+.blog-footer a {
+  color: var(--accentColor);
+  text-decoration: none;
+}
+
+.blog-footer a:hover {
+  text-decoration: underline;
+}
+
 .blog-header {
   margin-bottom: 60px;
 }
